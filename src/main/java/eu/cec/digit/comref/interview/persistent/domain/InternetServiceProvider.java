@@ -20,7 +20,7 @@ public class InternetServiceProvider implements Serializable {
 	private static final long serialVersionUID = -4292369331387884243L;
 
 	@Id
-	@Column(name = "NAME")
+	@Column(name = "NAME", length = 4096)
 	private String name;
 
 	@Column(name = "SPEED")
@@ -28,5 +28,4 @@ public class InternetServiceProvider implements Serializable {
 
 	@Column(name = "AVAILABLE")
 	private Boolean available;
-
 }

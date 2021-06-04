@@ -107,9 +107,9 @@ class InterviewTest2ApplicationTests {
 		testBasicInternetServiceProviderCrud();
 		List<InternetServiceProvider> list = interviewTest2Application.getInternetServiceProviders();
 
-		assertTrue(list.get(0).getName().equals("eltrona"));
-		assertTrue(list.get(1).getName().equals("luxonline"));
-		assertTrue(list.get(2).getName().equals("post"));
+		assertTrue(list.get(1).getName().equals("eltrona"));
+		assertTrue(list.get(2).getName().equals("luxonline"));
+		assertTrue(list.get(0).getName().equals("post"));
 
 	}
 
@@ -119,7 +119,7 @@ class InterviewTest2ApplicationTests {
 		testBasicInternetServiceProviderCrud();
 		List<InternetServiceProvider> list = interviewTest2Application.getAvailableInternetServiceProviders();
 
-		assertTrue(list.size() == 2);
+		assertTrue(list.size() == 3);
 		assertTrue(list.stream().anyMatch(f -> f.getName().equals("post")));
 		assertTrue(list.stream().anyMatch(f -> f.getName().equals("luxonline")));
 	}

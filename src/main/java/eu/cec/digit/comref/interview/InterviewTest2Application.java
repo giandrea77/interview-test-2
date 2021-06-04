@@ -60,13 +60,13 @@ public class InterviewTest2Application implements CommandLineRunner {
 
 	public Town getTown(String name) {
 
-		return townRepository.findById(Integer.getInteger(name)).orElse(null);
+		return townRepository.findById(name).orElse(null);
 
 	}
 
 	public void deleteTown(String name) {
 
-		townRepository.deleteById(Integer.getInteger(name));
+		townRepository.deleteById(name);
 
 	}
 
